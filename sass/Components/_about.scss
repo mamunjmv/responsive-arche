@@ -1,0 +1,103 @@
+@import '../mixins/afterBefore';
+@import '../mixins/cmFontStyle';
+#about_part {
+  
+
+.about_text {
+    padding-top: 95px;
+    h5 {
+        @include fontstyle(#d9b257, 16px, 'Montserrat Alternates', 500);
+        padding-bottom: 22px;
+    }
+    h2 {
+        @include fontstyle(#999, 28px, 'Montserrat Alternates', 400);
+        padding-bottom: 22px;  
+    }
+    p {
+        @include fontstyle(#444, 16px, 'Lato', 400);
+        padding-bottom: 28px; 
+    }
+    a {
+        @include fontstyle(#222,20px,'Montserrat Alternates',500);
+        line-height: 48px;
+        padding: 0 20px;
+        display: inline-block !important;
+        position: relative;
+        transition:all linear .3s ;
+        -webkit-transition:all linear .3s ;
+        -moz-transition:all linear .3s ;
+        -ms-transition:all linear .3s ;
+        -o-transition:all linear .3s ;
+        z-index: 1;
+        &:hover {
+            color: #fff;
+        }
+        &::after {
+            @include abefore();
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background: #d9b257;
+            z-index: -1;
+            transition:all linear .3s ;
+            -webkit-transition:all linear .3s ;
+            -moz-transition:all linear .3s ;
+            -ms-transition:all linear .3s ;
+            -o-transition:all linear .3s ;
+}
+        &:hover::after {
+            height: 48px;
+        }
+}
+}
+.main_counter {
+    padding: 84px 0 90px;
+
+.counter_text {
+    padding-bottom: 76px;
+    &:last-child {
+        padding-bottom: 0;
+    }
+    h4 {
+        @include fontstyle(#999,24px,'Montserrat Alternates',700);
+        text-align: center;
+        span {
+            @include fontstyle(#d9b257,64px,'Montserrat Alternates',700); 
+        }
+    }
+    p {
+        @include fontstyle(#999,24px,'Montserrat Alternates',700);
+        text-align: center; 
+    }
+}
+.counter {
+    padding-right: 5px;
+}
+.final {
+    padding-right: 65px;
+    position: relative;
+    &:after {
+        position: absolute;
+        content: '%';
+    }
+}
+.counter_line {
+    position: relative;
+    &::after {
+        @include abefore();
+        left: 50%;
+        bottom: 56px;
+        width: 60px;
+        height: 3px;
+        background:#d9b257;
+        transform:translateX(-50%) ;
+        -webkit-transform:translateX(-50%) ;
+        -moz-transform:translateX(-50%) ;
+        -ms-transform:translateX(-50%) ;
+        -o-transform:translateX(-50%) ;
+}
+}
+}
+
+}

@@ -1,0 +1,164 @@
+@import '../mixins/cmFontStyle';
+
+.menu_fix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    background: #fff;
+    height: 100px;
+}
+.main_menu {
+    padding: 23px 0 27px;
+    z-index: 999;
+    
+    
+
+
+    
+
+    ul {
+
+        li {
+            position: relative;
+
+            a.active {
+                color: #d9b257 !important;
+
+            }
+
+            &:hover ul {
+                bottom: -261px;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            ul {
+                position: absolute;
+                left: 0;
+                bottom: -290px;
+                width: 200px;
+                background: #f1f1f1;
+                text-align: center;
+                transition: all linear .3s;
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -ms-transition: all linear .3s;
+                -o-transition: all linear .3s;
+                visibility: hidden;
+                opacity: 0;
+                z-index: 999;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: -17px;
+                    left: 35px;
+                    border-top: 10px solid transparent;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-bottom: 10px solid #f1f1f1;
+                }
+
+                li a {
+                    @include fontstyle(#444, 16px, 'Montserrat Alternates', 500);
+                    line-height: 40px;
+                    position: relative;
+                    z-index: 1;
+                    transition: all linear .4s;
+                    -webkit-transition: all linear .4s;
+                    -moz-transition: all linear .4s;
+                    -o-transition: all linear .4s;
+                    -ms-transition: all linear .4s;
+
+
+                    &:hover {
+                        color: #d9b257;
+                    }
+
+                }
+            }
+        }
+
+        li a.nav-link {
+             @include fontstyle(#444, 16px, 'Montserrat Alternates', 500);
+            padding: 0 22px !important;
+            transition: all linear .3s;
+            -webkit-transition: all linear .3s;
+            -moz-transition: all linear .3s;
+            -ms-transition: all linear .3s;
+            -o-transition: all linear .3s;
+            z-index: 1;
+
+            i {
+                padding-left: 5px;
+            }
+
+            &:hover {
+                color: #d9b257;
+            }
+        }
+
+
+
+    }
+
+    .our_form {
+       
+          
+        
+        input {
+            width: 98px !important;
+            border: 0;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            font-size: 14px;
+            font-family: 'Montserrat Alternates', sans-serif;
+            font-weight: 500;
+            box-shadow: none;
+            color: #444;
+            transition: all linear .3s;
+            -webkit-transition: all linear .3s;
+            -moz-transition: all linear .3s;
+            -ms-transition: all linear .3s;
+            -o-transition: all linear .3s;
+        }
+
+        &:hover input {
+            width: 175px !important;
+            border: 1px solid #999;
+            padding-right: 40px;
+            margin-right: -40px !important;
+        }
+
+        &:hover button {
+            margin-left: 0;
+        }
+
+        button {
+            border: 0;
+            font-size: 16px;
+            margin-left: -20px;
+            color: #444;
+            text-align: right;
+            background: none;
+            transition: all linear .3s;
+            -webkit-transition: all linear .3s;
+            -moz-transition: all linear .3s;
+            -ms-transition: all linear .3s;
+            -o-transition: all linear .3s;
+            box-shadow: none;
+
+            padding: 8px 13px 7px;
+
+            &:hover {
+                background: none;
+                color: #666;
+            }
+        }
+    }
+}

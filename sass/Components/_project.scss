@@ -1,0 +1,144 @@
+$hover:#d9b257;
+#project_part {
+    padding: 95px 0 92px;
+
+    .project_head {
+        h5 {
+
+            @include fontstyle(#d9b257, 16px, 'Montserrat Alternates', 600);
+            padding-bottom: 7px;
+        }
+
+        h2 {
+            @include fontstyle(#999, 28px, 'Montserrat Alternates', 400);
+            padding-bottom: 52px;
+            margin: 0 40px;
+        }
+    }
+
+
+    .main_project {
+        margin-bottom: 50px;
+
+        &:hover .project_text h4,
+        &:hover .project_text h6 {
+            color: #d9b257;
+        }
+        .pad {
+            padding-left: 0
+        }
+
+        .project_text {
+            padding-left: 30px;
+            h6 {
+                @include fontstyle(#999, 14px, 'Montserrat Alternates', 500);
+                margin-top: 25px;
+                transition: all linear.4s;
+                -webkit-transition: all linear.4s;
+                -moz-transition: all linear.4s;
+                -ms-transition: all linear.4s;
+                -o-transition: all linear.4s;
+
+            }
+
+            h4 {
+                @include fontstyle(#999, 20px, 'Montserrat Alternates', 500);
+                margin-bottom: 10px;
+                margin-top: 7px;
+                transition: all linear.4s;
+                -webkit-transition: all linear.4s;
+                -moz-transition: all linear.4s;
+                -ms-transition: all linear.4s;
+                -o-transition: all linear.4s;
+
+
+            }
+
+
+        }
+
+
+        .project_img {
+            position: relative;
+
+            .overly {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                background: rgba(0, 0, 0, 0.8);
+                opacity: 0;
+                transition: all linear .3s;
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -ms-transition: all linear .3s;
+                -o-transition: all linear .3s;
+
+                .inner_project {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    -o-transform: translate(-50%, -50%);
+
+                    h5 {
+                        @include fontstyle(#fff, 16px, 'Montserrat Alternates', 500);
+                        padding-right: 7px;
+                        display: inline-block;
+                    }
+
+                    i {
+                        color: #fff;
+                    }
+                }
+
+            }
+
+            &:hover .overly {
+                height: 100%;
+                opacity: 1;
+            }
+
+
+        }
+    }
+    .project_button {
+        a {
+            padding: 20px 20px;
+            @include fontstyle(#222,20px,'Montserrat Alternates',500);
+            line-height: 28px;
+            position: relative;
+            transition: all linear .4s;
+         -webkit-transition: all linear .4s;
+            -moz-transition: all linear .4s;
+            -ms-transition: all linear .4s;
+            -o-transition: all linear .4s;
+        
+             &::after{
+                @include abefore();
+                left: 0;
+                bottom: 3px;
+                height: 3px;
+                width: 100%;
+                background:$hover ;
+                z-index: -1;
+                transition: all linear .4s;
+                -webkit-transition: all linear .4s;
+                -moz-transition: all linear .4s;
+                -ms-transition: all linear .4s;
+                -o-transition: all linear .4s;
+             }
+            &:hover {
+                color: #fff;
+            }
+            &:hover::after {
+                height: 60px;
+            }
+
+        }
+    }
+}

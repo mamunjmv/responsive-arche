@@ -1,0 +1,57 @@
+@import '../mixins/afterBefore';
+@import '../mixins/cmFontStyle';
+#about_banner {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+    &::after {
+    @include abefore();
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+
+}
+.about_bantxt {
+    h2 {
+        @include fontstyle(#d9b257, 44px, 'Montserrat Alternates', 500);
+    }
+    .about_ban {
+        a {
+            @include fontstyle(#fff, 16px, 'Montserrat Alternates', 400);  
+        }
+        span {
+            @include fontstyle(#fff, 16px, 'Montserrat Alternates', 400);   
+        }
+        a.colr {
+            @include fontstyle(#d9b257, 16px, 'Montserrat Alternates', 400);  
+        }
+    }
+}
+}
+.about_part_pad {
+    padding-bottom: 100px;
+    .about_last {
+        margin-top: 80px;
+        .bottom_text {
+            @include fontstyle(#444, 16px, 'Lato', 400);  
+            padding-top: 22px;
+            line-height: 26px;
+            span {
+                padding-top: 25px;
+                display: block;
+            }
+        }
+        .bottom_img1 {
+            padding-top: 28px;
+            padding-right: 10px;
+        }
+        
+    }
+
+}
+#testi_part {
+    padding-top: 100px;
+}

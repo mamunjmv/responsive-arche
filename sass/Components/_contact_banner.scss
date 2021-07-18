@@ -1,0 +1,106 @@
+@import '../mixins/afterBefore';
+@import '../mixins/bannerbef';
+@import '../mixins/cmFontStyle';
+#contact_banner_part {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+    &::after {
+        @include abefore();
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    }
+    .contact_head {
+        h2 {
+            @include fontstyle(#d9b257, 44px, 'Montserrat Alternates', 500);
+        }
+        .contact_txt {
+            a {
+                @include fontstyle(#fff, 16px, 'Montserrat Alternates', 400);  
+            }
+            span {
+                @include fontstyle(#fff, 16px, 'Montserrat Alternates', 400);   
+            }
+            a.active {
+                @include fontstyle(#d9b257, 16px, 'Montserrat Alternates', 400);  
+            }
+        }
+    }
+}
+#contact_part {
+    .contact_img {
+        position: relative;
+        a {
+            @include fontstyle(#d9b257, 14px, 'Montserrat Alternates', 400);
+            position: absolute;
+            top: 50%;
+            left: -26px;
+            transform: translateX(-50%) rotate(-90deg);
+            -webkit-transform: translateX(-50%) rotate(-90deg);
+            -moz-transform: translateX(-50%) rotate(-90deg);
+            -ms-transform: translateX(-50%) rotate(-90deg);
+            -o-transform: translateX(-50%) rotate(-90deg);
+}
+    }
+    .contact_info {
+        padding-top: 50px;
+        h4 {
+            @include fontstyle(#d9b257, 24px, 'Montserrat Alternates', 500); 
+            padding-bottom: 10px; 
+        }
+        p {
+            @include fontstyle(#444, 16px, 'Montserrat Alternates', 500); 
+            line-height: 26px;
+            padding-bottom: 50px; 
+            padding-right: 24px;
+        }
+    }
+    .contact_form {
+        h4 {
+            @include fontstyle(#d9b257, 24px, 'Montserrat Alternates', 500); 
+            padding-bottom: 20px;  
+        }
+        input {
+            @include fontstyle(#a59a9a, 14px, 'lato', 500); 
+            font-style: italic;
+            width: 470px;
+            height: 45px;
+            border: 0;
+            border-bottom: 1px solid #ddd;
+            margin-right: 25px;
+        }
+        textarea {
+            @include fontstyle(#a59a9a, 14px, 'lato', 500); 
+            font-style: italic;
+            margin-top: 90px;
+            width: 100%;
+            height: 45px;
+            border: 0;
+            border-bottom: 1px solid #ddd;
+            resize: none;
+        }
+        button {
+            @include fontstyle(#444, 20px, 'Montserrat Alternates', 500); 
+            width: 100%;
+            padding: 11px 0;
+            cursor: pointer;
+            margin-top: 25px;
+            border: 0;
+            margin-bottom: 50px;
+            transition:all linear .3s ;
+        -webkit-transition:all linear .3s ;
+        -moz-transition:all linear .3s ;
+        -ms-transition:all linear .3s ;
+        -o-transition:all linear .3s ;
+            &:hover {
+                background: #d9b257;
+                color: #fff;
+            }
+
+        }
+    }
+}

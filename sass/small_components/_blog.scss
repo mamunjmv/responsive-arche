@@ -1,0 +1,115 @@
+$hover:#d9b257;
+#blog_part {
+    padding: 95px 0;
+    .blog_head {
+        
+        h5 {
+            @include fontstyle(#d9b257,16px,'Montserrat Alternates',600);
+            padding-bottom: 10px;
+        }
+        h2 {
+            @include fontstyle(#999,28px,'Montserrat Alternates',400);
+            margin: 0 68px;
+            padding-bottom: 52px; 
+        }
+    }
+    .mar {
+        margin-right: 30px;
+    }
+    .blog_inner {
+        position: relative;
+        .overly {
+            position: absolute;
+            right: -25px;
+            bottom: -30px;
+            width: 360px;
+            background:#f5f5f5;
+            border: 1px solid $hover;
+            text-align: right;
+            padding: 30px;
+            h6 {
+                @include fontstyle(#999,14px,'Montserrat Alternates',500); 
+                span {
+                    padding-left: 15px
+                    
+                }
+                i {
+                    padding-right: 10px
+                }
+             
+            }
+            h4 {
+                @include fontstyle(#222,24px,'Lato',400);
+                line-height: 28px;
+                padding-bottom: 10px;  
+            }
+            a {
+                @include fontstyle(#222,20px,'Montserrat Alternates',500);
+                padding: 14px;
+                position: relative;
+                z-index: 1;
+                transition: all linear .3s;
+              
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -ms-transition: all linear .3s;
+                -o-transition: all linear .3s;
+                &:hover {
+                    color: #fff;
+                }
+               
+                &::after {
+                    @include abefore();
+                    left: 0;
+                    bottom: 8px;
+                    width: 100%;
+                    height: 3px;
+                    background:$hover;
+                    transition: all linear .4s;
+                    -webkit-transition: all linear .4s;
+                    -moz-transition: all linear .4s;
+                    -ms-transition: all linear .4s;
+                    -o-transition: all linear .4s;
+                    z-index: -1;
+                   
+                    
+} 
+&:hover::after {
+    height: 42px;
+   
+  
+}
+            }
+           
+
+        }
+
+    }
+    .blog_button {
+        padding-top: 50px;
+        a {
+            @include fontstyle(#222,20px,'Montserrat Alternates',500);
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            &::after {
+                @include abefore();
+                left: 0;
+                bottom: 6px;
+                width: 100%;
+                height: 3px;
+                z-index: -1;
+                background: $hover;
+                transition: all linear .3s;
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -ms-transition: all linear .3s;
+                -o-transition: all linear .3s;
+}
+        
+        &:hover::after {
+            height: 60px;
+        }
+    }
+    }
+}

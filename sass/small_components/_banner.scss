@@ -1,0 +1,34 @@
+@import '../mixins/cmFontStyle';
+
+$hover:#d9b257;
+
+#banner_part {
+    position: relative;
+     .banner_item {
+        padding: 100px 0;
+    }
+
+    .banner_small {
+     display: none;
+     .small_slider {
+            .slick-slide {
+                margin: 0 12px !important;
+                padding-top: 50px;
+            }
+             .slick-current {
+                .banner_border {
+                    &::after {
+                        background: $hover;
+                    }
+                }
+            }
+        }
+
+
+
+
+
+    }
+
+
+}

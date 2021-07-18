@@ -1,0 +1,160 @@
+@import '../mixins/afterBefore';
+@import '../mixins/cmFontStyle';
+$hover:#d9b257;
+#member_banner_part {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+    &::after {
+    @include abefore();
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+
+}
+.about_bantxt {
+    h2 {
+        @include fontstyle(#d9b257, 44px, 'Montserrat Alternates', 500);
+    }
+    .about_ban {
+        a {
+            @include fontstyle(#fff, 16px, 'Montserrat Alternates', 400);  
+        }
+        span {
+            @include fontstyle(#fff, 16px, 'Montserrat Alternates', 400);   
+        }
+        a.colr {
+            @include fontstyle(#d9b257, 16px, 'Montserrat Alternates', 400);  
+        }
+    }
+}
+}
+#member_part {
+    padding: 100px 0;
+   .member_img {
+       position: relative;
+       ul {
+           position: absolute;
+           top: 30px;
+           right: 50px;
+           li {
+               a {
+                @include fontstyle(#444, 16px, 'Montserrat Alternates', 400);  
+                   width: 60px;
+                   height: 60px;
+                   background:#fff;
+                   border-radius: 50%;
+                   -webkit-border-radius: 50%;
+                   -moz-border-radius: 50%;
+                   -ms-border-radius: 50%;
+                   -o-border-radius: 50%;
+                   line-height: 60px;
+                   text-align: center;
+                   margin-bottom: 20px;
+                   box-shadow: 0 0 8px 0 rgba(153, 153, 153, 0.7);
+                   transition:all linear .3s;
+                   -webkit-transition:all linear .3s;
+                   -moz-transition:all linear .3s;
+                   -ms-transition:all linear .3s;
+                   -o-transition:all linear .3s;
+                   &:hover {
+                       background:$hover;
+                       color: #fff;
+                   }
+}
+           }
+       }
+       
+   }
+   .member_pera {
+       h4 {
+        @include fontstyle(#d9b257, 20px, 'Montserrat Alternates', 500);
+        line-height: 28px;    
+       }
+       h5 {
+        @include fontstyle(#d9b257, 14px, 'Montserrat Alternates', 500);
+        line-height: 28px;     
+       }
+       p {
+        @include fontstyle(#444, 16px, 'none', 400); 
+        font-family: 'Arimo', sans-serif; 
+        padding-top: 18px;
+        padding-bottom: 48px; 
+       }
+       span {
+           display: block;
+           padding-top: 30px;
+       }
+   }
+
+.counter_two {
+    .counter_border {
+        position: relative;
+        &::after {
+            @include abefore();
+           left: 50%;
+           bottom: 50px;
+           width: 60px;
+           height: 3px;
+           background: $hover;
+           transform: translateX(-50%);
+           -webkit-transform: translateX(-50%);
+           -moz-transform: translateX(-50%);
+           -ms-transform: translateX(-50%);
+           -o-transform: translateX(-50%);
+}    
+    }
+    .counter_in {
+        padding-bottom: 84px;
+        text-align: center;
+
+        p {
+            span {
+                @include fontstyle($hover, 60px, 'Montserrat Alternates', 700);
+                padding-right:5px; 
+            }
+            @include fontstyle(#999, 24px, 'Montserrat Alternates', 700);
+            line-height: 20px;  
+            position: relative;
+           
+        }
+    }
+
+}
+.member_progress {
+    h3 {
+        @include fontstyle(#d9b257, 20px, 'Montserrat Alternates', 500);
+        padding-bottom: 20px;
+    }
+  
+    .single-progressbar {
+        h4 {
+            @include fontstyle(#999, 14px, 'Montserrat Alternates', 400);
+            padding-bottom: 5px;
+            line-height: 26px;
+          
+           
+}
+        .progressbar {
+            border-radius: 5px !important;
+            -webkit-border-radius: 5px !important;
+            -moz-border-radius: 5px !important;
+            -ms-border-radius: 5px !important;
+            -o-border-radius: 5px !important;
+        }
+         .percentCount {
+             @include fontstyle(#999, 14px, 'Montserrat Alternates', 400);  
+         }
+         .proggress {
+             border-radius: 5px !important;
+             -webkit-border-radius: 5px !important;
+             -moz-border-radius: 5px !important;
+             -ms-border-radius: 5px !important;
+             -o-border-radius: 5px !important;
+}
+    }
+}
+}

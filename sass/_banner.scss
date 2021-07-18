@@ -1,0 +1,142 @@
+@import './fontStyle.scss';
+@import './afterBefo.scss';
+$hover:#d9b257;
+#banner_part {
+    position: relative;
+    .banner_item {
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-attachment: fixed !important;
+        padding: 100px 0 320px;
+        position: relative;
+        z-index: 1;
+        &::after {
+            @include afterBefo ();
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        .banner_text {
+            h6 {
+                @include font (#d9b257,16px,500,'Montserrat Alternates');
+            }
+            h1 {
+                @include font (#fff,54px,500,'Montserrat Alternates') ;
+                span {
+                    @include font (#fff,54px,700,'Montserrat Alternates') ;
+                  display: block;
+                  padding-top: 3px;
+                }
+            }
+            a {
+                @include font (#fff,18px,500,'Montserrat Alternates') ;
+                margin-top: 50px; 
+                position: relative;
+                z-index: 1;
+
+                span {
+                    padding: 0 22px;
+                    line-height: 48px;
+                }
+                i {
+                    padding: 0 13px 0 22px;
+                    line-height: 48px;
+                    position: relative;
+                    z-index: 1;
+                    &::after {
+                        @include afterBefo();
+                        left: 0;
+                        bottom: -2px;
+                        width: 2px;
+                        background: #444;
+                        height: 0;
+                        transform:rotate(12deg) ;
+                        -webkit-transform:rotate(12deg) ;
+                        -moz-transform:rotate(12deg) ;
+                        -ms-transform:rotate(12deg) ;
+                        -o-transform:rotate(12deg) ;
+                        z-index: -1;
+                        
+}
+          
+}
+                &::after {
+                    @include afterBefo();
+                    left: 0;
+                    bottom: 0;
+                    height: 3px;
+                    width: 100%;
+                    background: $hover;
+                    z-index: -1;
+                    transition:all linear .3s ;
+                    -webkit-transition:all linear .3s ;
+                    -moz-transition:all linear .3s ;
+                    -ms-transition:all linear .3s ;
+                    -o-transition:all linear .3s ;
+}
+                &:hover::after {
+                   
+                    height:48px ;
+                }
+                &:hover i::after {
+                    height: 51px;
+        }
+
+            }
+        }
+    }
+    .banner_small {
+        @include afterBefo ();
+        left: 0;
+        bottom: 60px;
+        width: 100%;
+       .small_slider {
+           
+        .slick-slide {
+            margin: 0 12px !important;
+            padding-top: 50px;
+        }
+        .slick-current {
+            .banner_border {
+                &::after {
+                    background: $hover;
+                }
+            }
+        }
+        
+        .banner_border {
+            position: relative;
+            &::after {
+                @include afterBefo ();
+                top: -30px;
+                left: 0;
+                width: 95%;
+                height: 1px;
+                background: white;
+            }
+        }
+        .small_text {
+            h2 {
+                @include font(#fff, 44px,500, 'Montserrat Alternates' );
+            }
+            p {
+                @include font(#fff, 16px,500, 'Montserrat Alternates' );
+                margin-bottom: 0;
+            }
+            span {
+                @include font(#fff, 16px,500, 'Lato');
+                padding-top: -35px;
+            }
+        }
+        
+      
+        
+       }
+       }
+    
+    
+}

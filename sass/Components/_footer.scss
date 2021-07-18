@@ -1,0 +1,126 @@
+@import '../mixins/bannerbef';
+@import '../mixins/cmFontStyle';
+#footer_part {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+    &::after {
+        @include banneraf();
+        background: rgba(0, 0, 0, 0.8);
+        z-index: -1;
+    }
+    .footer_logo {
+        img {
+            padding-top: 40px;
+        }
+        p {
+            @include fontstyle(#777, 14px, 'Montserrat Alternates', 400);
+            padding-top: 52px;
+            text-align: left;
+        }
+    }
+    .footer_contact {
+        h3 {
+            @include fontstyle(#fff, 24px, 'Montserrat Alternates', 400); 
+            padding-bottom: 50px;
+        }
+        p {
+            @include fontstyle(#fff, 16px, 'Montserrat Alternates', 400);
+           padding-left: 48px;
+           padding-bottom: 48px;
+           position: relative;
+           i {
+            
+                position: absolute;
+                left: 0;
+                top: 20%;
+                transform: translateY(-50%);
+                font-size: 32px;
+              
+            
+           }
+        }
+        .con_last {
+            padding-bottom: 0;
+        }
+        
+    }
+    .footer_form {
+        h3 {
+            @include fontstyle(#fff, 24px, 'Montserrat Alternates', 400); 
+            padding-bottom: 50px; 
+        }
+        input {
+          
+                background: transparent;
+                border: 1px solid #2b2411;
+                width: 240px;
+                height: 45px;
+                padding-left: 15px;
+                color: #fff;
+                margin-bottom: 50px;
+            
+        }
+        button {
+          
+                padding: 0 15px;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 500;
+                font-family: 'Montserrat Alternates', sans-serif;
+                background: #d9b257;
+                line-height: 43px;
+                border: none;
+                margin-left: -6px;
+                cursor: pointer;
+            
+        }
+        h4 {
+           
+                color: #fff;
+                font-size: 24px;
+                font-weight: 400;
+                font-family: 'Montserrat Alternates', sans-serif;
+                padding-bottom: 20px;
+            }
+            a {
+                
+                    text-decoration: none;
+                    display: inline-block !important;
+                    i {
+                       
+                            width: 40px;
+                            height: 40px;
+                            line-height: 40px;
+                            color: #999;
+                            border: 1px solid #4f4328;
+                            text-align: center;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                            transition: all linear .4s;
+                            -webkit-transition: all linear .4s;
+                            -moz-transition: all linear .4s;
+                            -o-transition: all linear .4s;
+                            -ms-transition: all linear .4s;
+                            &:hover {
+                                background: $hover;
+                                color: #fff;
+                            }
+                        
+                    }
+                
+            }
+             p {
+                color: #777777;
+                font-size: 14px;
+                font-weight: 400;
+                font-family: 'Arimo', sans-serif;
+                padding-top: 25px;
+            }
+        
+    }
+}

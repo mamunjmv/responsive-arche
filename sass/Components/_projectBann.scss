@@ -1,0 +1,155 @@
+@import '../mixins/afterBefore';
+@import '../mixins/bannerbef';
+@import '../mixins/cmFontStyle';
+#project_banner_part {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+    &::after {
+        @include abefore();
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    }
+    .project_head {
+        h2 {
+            @include fontstyle(#d9b257, 44px, 'Montserrat Alternates', 500);
+        }
+    }
+    .project_txt {
+        a {
+            @include fontstyle(#fff, 16px, 'Montserrat Alternates', 400);  
+        }
+        span {
+            @include fontstyle(#fff, 16px, 'Montserrat Alternates', 400);   
+        }
+        a.active {
+            @include fontstyle(#d9b257, 16px, 'Montserrat Alternates', 400);  
+        }
+    }
+
+}
+#project_page_part {
+    padding: 100px 0;
+    .project_main {
+       
+        &:hover .project_main_txt h4,
+        &:hover .project_main_txt h6 {
+            color: #d9b257;
+        }
+        .project_img {
+            position: relative;
+            .overly {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 0;
+                background: rgba(0, 0, 0, 0.8);
+                opacity: 0;
+                transition: all linear .3s;
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -ms-transition: all linear .3s;
+                -o-transition: all linear .3s;
+              
+                .img_txt {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform:translate(-50%,-50%) ;
+                    -webkit-transform:translate(-50%,-50%) ;
+                    -moz-transform:translate(-50%,-50%) ;
+                    -ms-transform:translate(-50%,-50%) ;
+                    -o-transform:translate(-50%,-50%) ;
+                    a {
+                      
+                        display: inline-block !important;
+                        h5 {
+                            @include fontstyle(#fff,14px,'Montserrat Alternates',400);
+                            display: inline-block;
+                            padding-right: 5px;
+                        }
+                       
+                        i {
+                           
+                           color: #fff;
+                        }
+                    }
+               
+               
+}
+
+}
+           
+        }
+        &:hover .overly {
+            height: 100%;
+            opacity: 1;
+        }
+        .project_main_txt {
+            h6 {
+                @include fontstyle(#999, 14px, 'Montserrat Alternates', 500);
+                margin-top: 25px;
+                line-height: 28px; 
+                transition: all linear .3s;
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -ms-transition: all linear .3s;
+                -o-transition: all linear .3s;  
+            }
+            h4 {
+                @include fontstyle(#999, 20px, 'Montserrat Alternates', 500);
+                line-height: 28px;
+                padding-bottom: 10px; 
+                transition: all linear .3s;
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -ms-transition: all linear .3s;
+                -o-transition: all linear .3s; 
+            }
+        }
+    }
+    .pad {
+        padding-top: 65px;
+    }
+    .project_button {
+        padding-top: 45px;
+        margin-left: 130px;
+        ul {
+            li {
+                a {
+                    @include fontstyle(#999, none, 'Montserrat Alternates', 500);
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid #999;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    box-shadow: none;
+                    cursor: pointer;
+                    text-align: center;
+                    line-height: 37px;
+                   margin-right: 10px;
+                   transition: all linear .3s;
+                   -webkit-transition: all linear .3s;
+                   -moz-transition: all linear .3s;
+                   -ms-transition: all linear .3s;
+                   -o-transition: all linear .3s; 
+                   &:hover {
+                       background:#d9b257;
+                       color: #fff;
+                       border-color:#d9b257 ;
+                   }
+
+}
+            }
+        }
+    }
+   
+}

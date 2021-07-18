@@ -1,0 +1,177 @@
+@import '../mixins/cmFontStyle';
+
+.menu_fix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    background: #fff;
+    height: 90px ;
+    animation: menuanimate .4s linear;
+    -webkit-animation: menuanimate .4s linear;
+    padding-bottom: 7px;
+}
+.main_menu {
+    padding: 1px 0 1px;
+ 
+   
+    text-align: center;
+ 
+   
+    img {
+        height: 70px;
+    }
+    button {
+        border: 1px solid #d9b257;
+        outline: 0;
+        padding: 10px 12px;
+        line-height: 20px;
+        color: #d9b257;
+        font-size: 14px;
+        text-align: center;
+        &:focus {
+            box-shadow: none;
+        }
+       
+    }
+     .navbar-collapse {
+        border-top: 2px solid #d9b257;
+        background: #fff ;
+    }
+    .our_form {
+        display: none !important;
+    }
+  
+    
+    
+
+
+    
+
+    ul {
+
+        li {
+            position: relative;
+
+            a.active {
+                color: #d9b257 !important;
+
+            }
+
+            &:hover ul {
+                bottom: -180px;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            ul {
+               
+                left: 50%;
+              
+                width: 200px;
+                transform: translateX(-50%);
+              
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: -17px;
+                    left: 35px;
+                    border-top: 10px solid transparent;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-bottom: 10px solid #f1f1f1;
+                }
+
+                li a {
+                     @include fontstyle(#444, 16px, 'Montserrat Alternates', 500);
+                    line-height: 40px;
+                    position: relative;
+                    z-index: 1;
+                    transition: all linear .5s;
+                    -webkit-transition: all linear .5s;
+                    -moz-transition: all linear .5s;
+                    -o-transition: all linear .5s;
+                    -ms-transition: all linear .5s;
+                    &:hover {
+
+                        color: #d9b257;
+                    }
+
+                }
+            }
+        }
+
+        li a.nav-link {
+          
+            line-height: 50px;
+         
+
+          
+
+           
+        }
+
+
+
+    }
+
+    .our_form {
+       
+          
+        
+        input {
+            width: 98px !important;
+            border: 0;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            font-size: 14px;
+            font-family: 'Montserrat Alternates', sans-serif;
+            font-weight: 500;
+            box-shadow: none;
+            color: #444;
+            transition: all linear .3s;
+            -webkit-transition: all linear .3s;
+            -moz-transition: all linear .3s;
+            -ms-transition: all linear .3s;
+            -o-transition: all linear .3s;
+        }
+
+        &:hover input {
+            width: 175px !important;
+            border: 1px solid #999;
+            padding-right: 40px;
+            margin-right: -40px !important;
+        }
+
+        &:hover button {
+            margin-left: 0;
+        }
+
+        button {
+            border: 0;
+            font-size: 16px;
+            margin-left: -20px;
+            color: #444;
+            text-align: right;
+            background: none;
+            transition: all linear .3s;
+            -webkit-transition: all linear .3s;
+            -moz-transition: all linear .3s;
+            -ms-transition: all linear .3s;
+            -o-transition: all linear .3s;
+            box-shadow: none;
+
+            padding: 8px 13px 7px;
+
+            &:hover {
+                background: none;
+                color: #666;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import '../mixins/cmFontStyle';
+
+#header_part {
+    height: 50px;
+    background: #d9b257;
+    position: relative;
+
+    &::after {
+        @include abefore ();
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 89px;
+        background: url(../images/menu_shape.png);
+        z-index: -1;
+
+
+
+    }
+
+    .header_text p {
+        @include fontstyle(#fff, 16px, 'Lato', 500);
+        line-height: 50px;
+    }
+
+    .header_address {
+        text-align: right;
+
+        p {
+            @include fontstyle(#fff, 16px, 'Lato', 500);
+            line-height: 50px;
+            display: inline-block;
+            padding-left: 30px;
+
+            i {
+                padding-right: 5px
+            }
+        }
+
+        a {
+            @include fontstyle(#fff, 16px, 'Lato', 500);
+            line-height: 50px;
+            padding-left: 30px;
+
+            i {
+                padding-right: 5px;
+            }
+        }
+
+    }
+
+}

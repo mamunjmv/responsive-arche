@@ -1,0 +1,116 @@
+$hover:#d9b257;
+#testi_part {
+    padding-bottom: 160px;
+   
+    .testi_head {
+        h5 {
+            @include fontstyle(#d9b257, 16px, 'Montserrat Alternates', 600);
+            padding-bottom: 7px;
+        }
+        h2 {
+            @include fontstyle(#999, 28px, 'Montserrat Alternates', 400);
+            padding-bottom: 52px;
+            margin: 0 40px;
+        }
+    }
+    .testi_slider {
+        .width_remove {
+            width: 43% !important;
+            margin-right: 58px;
+        }
+    
+    .test_inside {
+        position: relative;
+        margin-bottom: 50px;
+        .test_text {
+            background: #f1f1f1;
+            padding: 50px 20px 30px 20px;
+            p {
+                @include fontstyle(#444, 20px, 'Lato', 400); 
+                padding-bottom: 55px;
+                line-height: 30px;
+            }
+             span {
+                font-family: "Autograf";
+                color: #d9b257;
+            }
+        }
+        
+        .overly {
+            padding: 55px 30px 30px 30px;
+            background:$hover ;
+            width: 298px;
+            position: absolute;
+            bottom: -35px;
+            right: -41px;
+            h5 {
+                @include fontstyle(#fff, 20px, 'Montserrat Alternates', 500);
+                padding-bottom: 5px;  
+            }
+            h6 {
+                @include fontstyle(#fff, 16px, 'Montserrat Alternates', 400);
+                padding-bottom: 5px;    
+            } 
+            i {
+                color: #fff;
+            }
+        }
+    }
+    .slick-slide {
+        display: flex;
+        img {
+            display: inline-block;
+        }
+    }
+    .slick-dots{
+        display: flex;
+        position: absolute;
+        left: 50%;
+        width: auto;
+        bottom: -60px;
+        transform: translateX(-50%);
+        
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+
+         li  button {
+                font-size: 0;
+                width: 15px;
+                height: 15px;
+                border: 2px solid #9999;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                background: transparent;
+                margin-right: 10px;
+                cursor: pointer;
+                position: relative;
+              
+              
+         }
+         li.slick-active button {
+                   
+            &::after {
+                @include abefore();
+                left: -3px;
+                top: -3px;
+                background: #d9b257;
+                border-color: #d9b257;
+                border-radius: 50%;
+                width: 18px;
+                height: 18px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+        }
+        } 
+    }
+        }
+    }
+    
+    

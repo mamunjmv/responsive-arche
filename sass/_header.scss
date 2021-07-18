@@ -1,0 +1,43 @@
+@import './fontStyle.scss';
+@import './afterBefo.scss';
+$hover:#d9b257;
+#header_part {
+    height: 50px;
+    background: $hover;
+    position: relative;
+    
+    &::after {
+        @include afterBefo ();
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 89px;
+        background: url(../images/menu_shape.png);
+        z-index: -1;
+    }
+    .header_text {
+        p {
+            @include font (#fff,16px,400,'Lato');
+            line-height: 50px;
+        }
+    }
+    .header_address {
+        text-align: right;
+        line-height: 50px;
+        a {
+            @include font (#fff,16px,400,'Lato'); 
+            padding-left: 30px;
+            i {
+                padding-right: 5px;
+            } 
+        }
+        p {
+            @include font (#fff,16px,400,'Lato'); 
+            display: inline-block;
+            padding-left: 30px;
+            i {
+                padding-right: 5px;
+            }
+        }
+    }
+}

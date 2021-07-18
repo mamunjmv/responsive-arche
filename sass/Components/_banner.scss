@@ -1,0 +1,179 @@
+@import '../mixins/cmFontStyle';
+
+$hover:#d9b257;
+
+#banner_part {
+    position: relative;
+  
+    .banner_item {
+     
+        padding: 100px 0 320px;
+        position: relative;
+       
+        z-index: 1;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        .banner_text {
+            h6 {
+                @include fontstyle(#d9b257, 16px, 'Montserrat Alternates', 500);
+                padding-bottom: 10px;
+            }
+
+            h1 {
+                @include fontstyle(#fff, 54px, 'Montserrat Alternates', 500);
+
+            }
+
+            h1 span {
+                display: block;
+                font-weight: 700;
+                padding-top: 3px;
+            }
+
+            a {
+             @include fontstyle(#fff, 18px, 'Montserrat Alternates', 500);
+                margin-top: 50px;
+                display: inline-block !important;
+                z-index: 1;
+                position: relative;
+               
+                    
+                span
+{
+
+                    padding: 0 22px;
+                    line-height: 48px;
+                }
+
+                i {
+                    padding: 0 13px 0 20px;
+                    line-height: 50px;
+                    position: relative;
+
+                    &::after {
+                        @include abefore();
+                        left: 0;
+                        bottom: -2px;
+                        height: 0px;
+                        width: 2px;
+                        background: #222;
+                        transform: rotate(12deg);
+                        -webkit-transform: rotate(12deg);
+                        -moz-transform: rotate(12deg);
+                        -ms-transform: rotate(12deg);
+                        -o-transform: rotate(12deg);
+                        transition:all linear .4s ;
+                        -webkit-transition:all linear .4s ;
+                        -moz-transition:all linear .4s ;
+                        -ms-transition:all linear .4s ;
+                        -o-transition:all linear .4s ;
+                        z-index: 999;
+}
+                }
+
+                
+
+                &::after {
+                    @include abefore();
+                    bottom: 0px;
+                    left: 0;
+                    height: 3px;
+                    width: 100%;
+                    background: $hover;
+                    transition: all linear .4s;
+                    -webkit-transition: all linear .4s;
+                    -moz-transition: all linear .4s;
+                    -ms-transition: all linear .4s;
+                    -o-transition: all linear .4s;
+
+                }
+
+                &:hover::after {
+                    height: 48px;
+                    z-index: -1;
+                 
+
+                }
+
+                 &:hover i::after {
+                     height: 51px;
+                    z-index: 1;
+                  
+                   
+                 }
+
+
+            }
+
+        }
+    
+}
+    .banner_small {
+        position: absolute;
+        left: 0;
+        bottom: 60px;
+        width: 100%;
+        .small_slider {
+            .slick-slide {
+                margin: 0 12px !important;
+                padding-top: 50px;
+            }
+            .slick-current {
+                .banner_border {
+                    &::after {
+                        background: $hover;
+                    }
+                }
+            }
+        }
+        
+      
+
+           
+        .banner_border {
+            position: relative;
+         
+           
+           
+            &::after {
+                @include abefore();
+                left: 0;
+                top: -30px;
+                width: 93% !important;
+                height: 1px;
+               background:#fff;
+              
+              
+            }
+          
+       
+    }
+    .small_text {
+        padding-top: 40px;
+      
+        h2 {
+            @include fontstyle(#fff, 44px, 'Montserrat Alternates', 700);
+        }
+        p {
+            @include fontstyle(#fff, 16px, 'Montserrat Alternates', 500);
+            margin-bottom: 0;
+        }
+        span {
+            @include fontstyle(#fff, 16px, 'Lato', 500);
+            padding-top: -35px;
+        }
+    }
+}
+    
+
+    }
